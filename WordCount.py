@@ -5,22 +5,24 @@
 
 def main():
   textFile = open("fish.txt", 'r')
-  lineCount = 0 
+  lineCount = 0
   wordCount = 0 
-  letterCount = 0 
-
+  letters = 0
   for line in textFile:
-    lineCount = lineCount + 1 
-    words = line.split()
-    for w in words:
-      wordCount = wordCount + 1 
-    
-    print("Lines:", lineCount)
-    print("words:", wordCount)
+      lineCount +=1
+      words = line.split()
 
 
-  print("Lines:" , lineCount)
+      for word in  words:
+         print(word)
+         wordcount += 1
+
+         for letter in words:
+            print(letter)
+            letter += 1
   
-
+  print("Lines:", lineCount)
+  print("Words:", wordCount)
+  print("Letters:", letters)
 if __name__ == '__main__':
   main()
